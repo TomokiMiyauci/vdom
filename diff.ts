@@ -11,23 +11,23 @@ import {
   type VText,
 } from "./types.ts";
 
-export interface Common {
+interface BaseDiff {
   type: DiffType;
   paths: readonly number[];
 }
 
-export interface ModifyDiff extends Common {
+export interface ModifyDiff extends BaseDiff {
   type: DiffType.Modify;
   from: VNode;
   to: VNode;
 }
 
-export interface AddDiff extends Common {
+export interface AddDiff extends BaseDiff {
   type: DiffType.Add;
   node: VNode;
 }
 
-export interface DeleteDiff extends Common {
+export interface DeleteDiff extends BaseDiff {
   type: DiffType.Delete;
   node: VNode;
 }
@@ -121,9 +121,9 @@ export function diffAttr(
   right: VAttr,
   paths: readonly number[] = [],
 ): Diff[] {
-  if (left.value === right.value) return [];
+  if (left.name === right.name && left.value === right.value) return [];
 
-  const diff: Diff = {
+  const diff: ModifyDiff = {
     type: DiffType.Modify,
     from: left,
     to: right,
