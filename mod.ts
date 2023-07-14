@@ -16,3 +16,5 @@ export {
   createNode,
   createText,
 } from "./dom.ts";
+export { diff } from "./diff.ts";
+export { patch } from "./patch.ts";
