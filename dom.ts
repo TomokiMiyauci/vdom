@@ -2,6 +2,9 @@
 // This module is browser compatible.
 
 import {
+  type AttrLike,
+  ElementLike,
+  NodeLike,
   type VAttr,
   type VElement,
   type VFragment,
@@ -10,20 +13,8 @@ import {
   type VText,
 } from "./types.ts";
 
-export interface ElementLike<Attr> extends NodeLike {
-  setAttributeNode(attr: Attr): void;
-}
-
-export interface NodeLike {
-  appendChild(node: unknown): void;
-}
-
-export interface AttrLike {
-  value: string;
-}
-
 export interface DocumentLike<
-  Element,
+  Element extends ElementLike<AttrLike>,
   Attr extends AttrLike,
   DocumentFragment,
   Text,
@@ -49,7 +40,7 @@ export function createNode<
   Element extends ElementLike<Attr>,
   Attr extends AttrLike,
   DocumentFragment extends NodeLike,
-  Text,
+  Text extends NodeLike,
 >(
   node: VNode,
   document: DocumentLike<Element, Attr, DocumentFragment, Text>,
@@ -69,14 +60,9 @@ export function createNode<
   }
 }
 
-export function createElement<
-  Element extends ElementLike<Attr>,
-  Attr extends AttrLike,
-  DocumentFragment extends NodeLike,
-  Text,
->(
+export function createElement<Element extends ElementLike<AttrLike>>(
   node: VElement,
-  document: DocumentLike<Element, Attr, DocumentFragment, Text>,
+  document: DocumentLike<Element, AttrLike, NodeLike, NodeLike>,
 ): Element {
   const element = document.createElement(node.tagName);
   const attrs = node.attributes.map((node) => createAttr(node, document));
@@ -95,15 +81,15 @@ export function createText<Text>(
   return document.createTextNode(node.data);
 }
 
-export function createDocumentFragment<
-  Element extends ElementLike<Attr>,
-  Attr extends AttrLike,
-  DocumentFragment extends NodeLike,
-  Text,
->(
+export function createDocumentFragment<DocumentFragment extends NodeLike>(
   node: VFragment,
-  document: DocumentLike<Element, Attr, DocumentFragment, Text>,
-) {
+  document: DocumentLike<
+    ElementLike<AttrLike>,
+    AttrLike,
+    DocumentFragment,
+    NodeLike
+  >,
+): DocumentFragment {
   const documentFragment = document.createDocumentFragment();
   const elements = node.children.map((node) => createNode(node, document));
 
