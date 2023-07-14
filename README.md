@@ -43,7 +43,7 @@ function app(count: number): VElement {
     nodeType: VNodeType.Element,
     tagName: "div",
     attributes: [{
-      nodeType: VNodeType.Attr,
+      nodeType: VNodeType.Attribute,
       name: "style",
       value: "color: red;",
     }],
@@ -55,15 +55,15 @@ function app(count: number): VElement {
 
 let count = 0;
 let vnode = app(count);
-const element = createElement(vnode, document);
-const root = document.body.append(element);
+const root = createElement(vnode, document);
+document.body.append(root);
 
 setInterval(() => {
   const newVNode = app(++count);
   const patches = diff(vnode, newVNode);
 
-  patch(rootNode, patches, document);
-  element = newElement;
+  patch(root, patches, document);
+  vnode = newVNode;
 }, 1000);
 ```
 
