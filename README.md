@@ -1,5 +1,16 @@
 # vdom
 
+[![deno land](http://img.shields.io/badge/available%20on-deno.land/x-lightgrey.svg?logo=deno)](https://deno.land/x/vdom)
+[![deno doc](https://doc.deno.land/badge.svg)](https://deno.land/x/vdom?doc)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/TomokiMiyauci/vdom)](https://github.com/TomokiMiyauci/vdom/releases)
+[![codecov](https://codecov.io/github/TomokiMiyauci/vdom/branch/main/graph/badge.svg)](https://codecov.io/gh/TomokiMiyauci/vdom)
+[![License](https://img.shields.io/github/license/TomokiMiyauci/vdom)](LICENSE)
+
+[![test](https://github.com/TomokiMiyauci/vdom/actions/workflows/test.yaml/badge.svg)](https://github.com/TomokiMiyauci/vdom/actions/workflows/test.yaml)
+[![NPM](https://nodei.co/npm/@miyauci/vdom.png?mini=true)](https://nodei.co/npm/@miyauci/vdom/)
+[![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg)](https://github.com/RichardLitt/standard-readme)
+[![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
+
 Virtual DOM specification and diff-patch algorithm.
 
 ## Background
@@ -66,6 +77,10 @@ setInterval(() => {
   vnode = newVNode;
 }, 1000);
 ```
+
+## Documentation
+
+- [FAQ](docs/faq.md)
 
 ## API
 
