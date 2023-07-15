@@ -1,0 +1,22 @@
+{
+  "version": "2",
+  "remote": {
+    "https://deno.land/std@0.190.0/collections/distinct.ts": "5f9671702ace8bc0ca59237554e6d7509b08899338ce6f990d146d26538339ea",
+    "https://deno.land/std@0.190.0/collections/min_of.ts": "cf0208457d365db0403bdfaa0bc84110ccbbc338db6a56f943c59cd8026d531d",
+    "https://deno.land/std@0.190.0/collections/zip.ts": "a214754eec9490a27056dc568bbbb6f5455dd9cea7543c96bde93ca274068b0d",
+    "https://deno.land/std@0.190.0/fmt/colors.ts": "d67e3cd9f472535241a8e410d33423980bec45047e343577554d3356e1f0ef4e",
+    "https://deno.land/std@0.190.0/testing/_diff.ts": "1a3c044aedf77647d6cac86b798c6417603361b66b54c53331b312caeb447aea",
+    "https://deno.land/std@0.190.0/testing/_format.ts": "a69126e8a469009adf4cf2a50af889aca364c349797e63174884a52ff75cf4c7",
+    "https://deno.land/std@0.190.0/testing/_test_suite.ts": "30f018feeb3835f12ab198d8a518f9089b1bcb2e8c838a8b615ab10d5005465c",
+    "https://deno.land/std@0.190.0/testing/asserts.ts": "e16d98b4d73ffc4ed498d717307a12500ae4f2cbe668f1a215632d19fcffc22f",
+    "https://deno.land/std@0.190.0/testing/bdd.ts": "59f7f7503066d66a12e50ace81bfffae5b735b6be1208f5684b630ae6b4de1d0",
+    "https://deno.land/std@0.190.0/testing/mock.ts": "220ed9b8151cb2cac141043d4cfea7c47673fab5d18d1c1f0943297c8afb5d13",
+    "https://deno.land/x/isx@1.5.0/is_object.ts": "2be446c48f74a7a55bbcc2c42f49589e64254d733f5c42a76efed97103956c66",
+    "https://deno.land/x/isx@1.5.0/is_string.ts": "5a1051d86af89c08bc5f8720a9e079b12335a96710b5dcc7ed87509a64edbcb6",
+    "https://deno.land/x/seqtools@1.0.0/head_tail.ts": "af1a1c2059c257dc373db43d257591aec8210e8abafdffcf9c79c87a2edbd110",
+    "https://deno.land/x/seqtools@1.0.0/init.ts": "b05f3b5c23bb7c325b5c95113619798eb6db8887d191b23eb8e9fbe75071e7fe",
+    "https://deno.land/x/seqtools@1.0.0/init_last.ts": "07f1db99c5c4f591962be88941e6e1a0e6a2f270d8d6c74f822c0db391bc23c7",
+    "https://deno.land/x/seqtools@1.0.0/last.ts": "ddcb15157cc7ee22faacc1806ae43db53e9d644ee55330d92f599e4e188bafeb",
+    "https://deno.land/x/seqtools@1.0.0/types.ts": "ba3dc8198262da4486c4ba8aef1852a42e819002aadde949c69e7cc9886b9842"
+  }
+}
